@@ -40,6 +40,6 @@ before_install:
 - sudo $PYTHON get-pip.py
 
 script:
-- $PYTHON -m pip install taichi-nightly && $PYTHON -m taichi test
+- $PYTHON -m pip install taichi-nightly --user && $PYTHON -m taichi test
 
 
