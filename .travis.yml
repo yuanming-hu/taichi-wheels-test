@@ -32,9 +32,10 @@ matrix:
 before_install:
 - eval "${MATRIX_EVAL}"
 - echo $CXX
-- echo $PYTHON
+- python3 --version
+- python --version
 
 script:
-- $PYTHON -m pip install taichi-nightly && $PYTHON -m taichi test
+- python3 -m pip install taichi-nightly && python3 -m taichi test
 
 
