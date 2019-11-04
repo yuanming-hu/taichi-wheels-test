@@ -38,11 +38,6 @@ before_install:
 - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 - $PYTHON --version
 - sudo $PYTHON get-pip.py
-- $PYTHON -c "from distutils import sysconfig; print(sysconfig.get_config_var('LIBDIR'))"
-- $PYTHON -c "from distutils import sysconfig; print(sysconfig.get_python_lib())"
-- ls /usr/lib
-- ls /usr/lib/python3/dist-packages
- 
 
 script:
 - $PYTHON -m pip install taichi-nightly --user && $PYTHON -m taichi test
