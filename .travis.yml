@@ -35,7 +35,9 @@ before_install:
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo add-apt-repository -y ppa:deadsnakes/ppa;
   sudo apt-get update; sudo apt-get install $PYTHON -y;
   fi
+- curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 - $PYTHON --version
+- sudo $PYTHON get-pip.py
 
 script:
 - $PYTHON -m pip install taichi-nightly && $PYTHON -m taichi test
