@@ -40,8 +40,8 @@ before_install:
 - sudo $PYTHON get-pip.py
 - $PYTHON -c "from distutils import sysconfig; print(sysconfig.get_config_var('LIBDIR'))"
 - $PYTHON -c "from distutils import sysconfig; print(sysconfig.get_python_lib())"
-- ls /usr/lib | grep libpython
-- ls /usr/lib/python3/dist-packages | grep libpython
+- ls /usr/lib
+- ls /usr/lib/python3/dist-packages
  
 
 script:
