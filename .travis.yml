@@ -32,7 +32,9 @@ matrix:
 before_install:
 - eval "${MATRIX_EVAL}"
 - echo $CXX
-- apt-get install $PYTHON
+- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then 
+    sudo apt-get install $PYTHON;
+  fi
 - $PYTHON --version
 
 script:
