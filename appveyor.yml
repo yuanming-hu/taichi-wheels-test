@@ -1,0 +1,26 @@
+#---------------------------------#
+#      general configuration      #
+#---------------------------------#
+
+# version format
+version: 0.0.{build}-{branch}
+
+#---------------------------------#
+#    environment configuration    #
+#---------------------------------#
+
+image: Visual Studio 2017
+clone_folder: C:\taichi
+
+#---------------------------------#
+#       build configuration       #
+#---------------------------------#
+
+platform: x64
+configuration: Release
+
+build_script:
+  - set PYTHON=C:\Python36-x64\python.exe
+  - "%PYTHON% -m pip install taichi-nightly"
+  - "%PYTHON% -m taichi test"
+
