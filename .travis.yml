@@ -12,20 +12,10 @@ matrix:
       - MATRIX_EVAL="CC=clang && CXX=clang++ && PYTHON=python3.7"
   - os: linux
     dist: xenial
-    addons:
-      apt:
-        sources: *1
-        packages:
-        - g++-5
     env:
     - MATRIX_EVAL="CC=gcc-5 && CXX=g++-5 && PYTHON=python3.6"
   - os: linux
     dist: xenial
-    addons:
-      apt:
-        sources: *1
-        packages:
-        - g++-5
     env:
     - MATRIX_EVAL="CC=gcc-5 && CXX=g++-5 && PYTHON=python3.7"
 
